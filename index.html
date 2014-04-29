@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link href='http://fonts.googleapis.com/css?family=Inconsolata:700' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<title>Hot Box Lite</title>
+</head>
+<body>	
+	<div class="holder">
+		<ul class="btns clearfix">
+	        <li>
+	        	<h1>sequencer</h1>
+	            <button class="ctrl-btn" 	  id="play-pause-btn">play</button>
+	            <button class="ctrl-btn last" id="clear-btn">clear</button>
+	        </li>
+	        <li>
+	        	<h1>mode</h1>
+	            <button class="ctrl-btn" 	  id="pad-mode-btn">pads</button>
+	            <button class="ctrl-btn last" id="step-mode-btn">steps</button>
+	        </li>
+	        <li>
+	        	<h1>length</h1>
+	        	<div id="length-display"     class="display single">8</div>
+	            <button id="length-up-btn"   class="up-btn"></button>
+	            <button id="length-down-btn" class="down-btn"></button>
+	        </li>
+	        <li>
+	        	<h1>bar</h1>
+	        	<div id="bar-display"     class="display single">1</div>
+	            <button id="bar-up-btn"   class="up-btn"></button>
+	            <button id="bar-down-btn" class="down-btn"></button>
+	        </li>
+	        <li>
+	        	<h1>drum kit</h1>
+	        	<div id="kit-display"     class="display single">4</div>
+	            <button id="kit-up-btn"   class="up-btn"></button>
+	            <button id="kit-down-btn" class="down-btn"></button>
+	        </li>
+	        <li>
+	        	<h1>tempo</h1>
+	            <div id="tempo-display"     class="display triple">100</div>
+	            <button id="tempo-up-btn"   class="up-btn"></button>
+	            <button id="tempo-down-btn" class="down-btn"></button>
+	        </li>
+		</ul>
+	</div>
+	
+	<div class="holder">
+	
+		<!-- PADS -->
+		<div class="pad-box clearfix">
+			<div class="crop-box">
+		        <ul class="pads">
+		            <li><a href="javascript:void(0)" data-id="6" data-keynum="7">channel 6</a></li>
+		            <li><a href="javascript:void(0)" data-id="7" data-keynum="8">channel 7</a></li>
+		            <li><a href="javascript:void(0)" data-id="8" data-keynum="9">channel 8</a></li>
+		            
+		            <li><a href="javascript:void(0)" data-id="3" data-keynum="4">channel 3</a></li>
+		            <li><a href="javascript:void(0)" data-id="4" data-keynum="5">channel 4</a></li>
+		            <li><a href="javascript:void(0)" data-id="5" data-keynum="6">channel 5</a></li>
+		            
+		            <li><a href="javascript:void(0)" data-id="0" data-keynum="1">channel 0</a></li>
+		            <li><a href="javascript:void(0)" data-id="1" data-keynum="2">channel 1</a></li>
+		            <li><a href="javascript:void(0)" data-id="2" data-keynum="3">channel 2</a></li>
+		        </ul>
+			</div>
+		</div>
+		
+		<!-- STEPS -->
+		<div class="step-box clearfix">  
+			<div class="labels-holder">
+	    		
+	    	</div>
+	    	<div class="crop-box">
+	            <div class="steps-holder clearfix">
+	            	
+	            </div>
+	        </div>
+    	</div>
+	</div>
+	<div class="spacer-stroke"></div>
+	
+	<div class="modal">
+		<div class="modal-msg">
+			<img src="img/load-ring.gif" alt="loading" />
+		</div>
+	</div>
+    
+    <script type="text/javascript" src="js/consolelog.js"></script>
+	<script type="text/javascript" src="js/poc.js"></script>
+    
+</body>
+</html>

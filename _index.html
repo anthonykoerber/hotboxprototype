@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<title>Hot Box Lite</title>
+</head>
+<body>	
+	<div class="container">
+    	
+        <ul class="pads">
+            <li><a href="javascript:void(0)" class=""     data-id="0" data-keynum="7">channel 0</a></li>
+            <li><a href="javascript:void(0)" class=""     data-id="1" data-keynum="8">channel 1</a></li>
+            <li><a href="javascript:void(0)" class="last" data-id="2" data-keynum="9">channel 2</a></li>
+            <li><a href="javascript:void(0)" class=""     data-id="3" data-keynum="4">channel 3</a></li>
+            <li><a href="javascript:void(0)" class=""     data-id="4" data-keynum="5">channel 4</a></li>
+            <li><a href="javascript:void(0)" class="last" data-id="5" data-keynum="6">channel 5</a></li>
+            <li><a href="javascript:void(0)" class=""     data-id="6" data-keynum="1">channel 6</a></li>
+            <li><a href="javascript:void(0)" class=""     data-id="7" data-keynum="2">channel 7</a></li>
+            <li><a href="javascript:void(0)" class="last" data-id="8" data-keynum="3">channel 8</a></li>
+        </ul>
+        
+        <div class="btns">
+        	<div class="ctrl-group">
+            	<h1>tempo</h1>
+                <div id="tempo-display" class="display triple"></div>
+                <button id="tempo-up-btn"></button>
+                <button id="tempo-down-btn"></button>
+            </div>
+            <div class="ctrl-group">
+            	<h1>sequencer</h1>
+                <button class="ctrl-btn" 	  id="play-btn">PLAY</button>
+                <button class="ctrl-btn" 	  id="stop-btn">STOP</button>
+                <button class="ctrl-btn last" id="clear-btn">CLEAR</button>
+            </div>
+            <div class="ctrl-group">
+            	<h1>seq length</h1>
+            	<div id="length-display" class="display single"></div>
+                <button id="length-up-btn"></button>
+                <button id="length-down-btn"></button>
+            </div>
+            <div class="ctrl-group last">
+            	<h1>seq bar</h1>
+            	<div id="bar-display" class="display single"></div>
+                <button id="bar-up-btn"></button>
+                <button id="bar-down-btn"></button>
+            </div>
+            <div class="ctrl-group">
+            	<h1>drum kit</h1>
+            	<div id="kit-display" class="display single"></div>
+                <button id="kit-up-btn"></button>
+                <button id="kit-down-btn"></button>
+            </div>
+    	</div>
+        
+        <div class="steps-crop">
+            <div class="steps-holder">
+                <!--
+                <ul class="steps-light">
+                    <li><a href="javascript:void(0)" data-id="0" >step 0</a></li>
+                    <li><a href="javascript:void(0)" data-id="1" >step 1</a></li>
+                    <li><a href="javascript:void(0)" data-id="2" >step 2</a></li>
+                    <li><a href="javascript:void(0)" data-id="3" >step 3</a></li>
+                    <li><a href="javascript:void(0)" data-id="4" >step 4</a></li>
+                    <li><a href="javascript:void(0)" data-id="5" >step 5</a></li>
+                    <li><a href="javascript:void(0)" data-id="6" >step 6</a></li>
+                    <li><a href="javascript:void(0)" data-id="7" >step 7</a></li>
+                    <li><a href="javascript:void(0)" data-id="8" >step 8</a></li>
+                    <li><a href="javascript:void(0)" data-id="9" >step 9</a></li>
+                    <li><a href="javascript:void(0)" data-id="10">step 10</a></li>
+                    <li><a href="javascript:void(0)" data-id="11">step 11</a></li>
+                    <li><a href="javascript:void(0)" data-id="12">step 12</a></li>
+                    <li><a href="javascript:void(0)" data-id="13">step 13</a></li>
+                    <li><a href="javascript:void(0)" data-id="14">step 14</a></li>
+                    <li><a href="javascript:void(0)" data-id="15">step 15</a></li>
+                </ul>
+                -->
+                <!--
+                <ul class="steps">
+                    <li><a href="javascript:void(0)" class="q" data-channel="0" data-step="0" >step 0</a></li>
+                    <li><a href="javascript:void(0)" data-channel="0" data-step="1" >step 1</a></li>
+                    <li><a href="javascript:void(0)" data-channel="0" data-step="2" >step 2</a></li>
+                    <li><a href="javascript:void(0)" data-channel="0" data-step="3" >step 3</a></li>
+                    <li><a href="javascript:void(0)" class="q" data-channel="0" data-step="4" >step 4</a></li>
+                    <li><a href="javascript:void(0)" data-channel="0" data-step="5" >step 5</a></li>
+                    <li><a href="javascript:void(0)" data-channel="0" data-step="6" >step 6</a></li>
+                    <li><a href="javascript:void(0)" data-channel="0" data-step="7" >step 7</a></li>
+                    <li><a href="javascript:void(0)" class="q" data-channel="0" data-step="8" >step 8</a></li>
+                    <li><a href="javascript:void(0)" data-channel="0" data-step="9" >step 9</a></li>
+                    <li><a href="javascript:void(0)" data-channel="0" data-step="10">step 10</a></li>
+                    <li><a href="javascript:void(0)" data-channel="0" data-step="11">step 11</a></li>
+                    <li><a href="javascript:void(0)" class="q" data-channel="0" data-step="12">step 12</a></li>
+                    <li><a href="javascript:void(0)" data-channel="0" data-step="13">step 13</a></li>
+                    <li><a href="javascript:void(0)" data-channel="0" data-step="14">step 14</a></li>
+                    <li><a href="javascript:void(0)" data-channel="0" data-step="15">step 15</a></li>
+                </ul>
+                -->
+            </div>
+        </div>
+        
+        <div class="spacer"></div>
+        
+    </div>
+    
+	<script type="text/javascript" src="js/app.js"></script>
+    
+</body>
+</html>
