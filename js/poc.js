@@ -215,7 +215,9 @@ function loadDrumSound(kitObj, drumIndex){
 	var sound   = kitObj.drumSounds[drumIndex],
 		url     = 'audio/' + kitObj.folderName + '/' + sound.name + '.wav',
 		request = new XMLHttpRequest();
-		
+	
+	// TODO - see: http://joshondesign.com/p/books/canvasdeepdive/chapter12.html
+	// for context.decodeAudioData
 	request.open("GET", url, true);
 	request.responseType = "arraybuffer";
 	// ConsoleLog.log('loadDrumKits:: loading drum sound: ' + sound.name, + ', ' + url);
