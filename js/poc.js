@@ -126,12 +126,12 @@ function init(){
 	modal         = $('.modal');
 	
 	// check for audio context - current compatability:
-	if ('webkitAudioContext' in window) {
-		// ConsoleLog.log('webkitAudioContext is supported. Yay!');
-		context = new webkitAudioContext();
+	if ('AudioContext' in window) {
+		// ConsoleLog.log('AudioContext is supported. Yay!');
+		context = new AudioContext();
 		audioApiSetup();
 	} else {
-		alert('Sorry - this browser doesn\'t support the Web Audio API. Try Chrome 10+ or Safari 6+');
+		alert('Sorry - this browser doesn\'t support the Web Audio API.');
 	}
 	
 	// bind for key presses:
@@ -189,7 +189,7 @@ function audioApiSetup(){
 	finalMixNode = context.destination;
 
 	// create master volume.
-	masterGainNode = context.createGainNode();
+	masterGainNode = context.createGain();
 	masterGainNode.gain.value = 0.9; // reduce overall volume to avoid clipping
 	masterGainNode.connect(finalMixNode);	
 	
@@ -254,7 +254,7 @@ function kitLoadComplete(kitObj){
 function playNote(buffer, note, noteTime, pan, x, y, z) {
 	var volume    = (note > 1) ? VOL_MAX : VOL_MIN,
 		voice     = context.createBufferSource(),
-		gainNode  = context.createGainNode(),
+		gainNode  = context.createGain(),
 		finalNode;
 	
 	voice.buffer        = buffer;
@@ -263,7 +263,7 @@ function playNote(buffer, note, noteTime, pan, x, y, z) {
 	// optionally, connect to a panner:
     if (pan) {
         var panner = context.createPanner();
-        panner.panningModel = webkitAudioPannerNode.HRTF;
+        panner.panningModel = 'HRTF';
         panner.setPosition(x, y, z);
         voice.connect(panner);
         finalNode = panner;
