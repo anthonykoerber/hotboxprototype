@@ -16,39 +16,39 @@ var context,
 	masterGainNode,
 	drumKits = [
 		{ folderName:'kit1', name:'808 Nasty Kit', id:0, loaded:false, drumSounds:[
-				{ name:'bass_square_a1',  pan:false, panX:0,     panY:0, panZ:0, buffer:undefined },
-				{ name:'clap_gate',       pan:true,  panX:0.25,  panY:0, panZ:0, buffer:undefined },
-				{ name:'closed_hat_dm5',  pan:false, panX:0,     panY:0, panZ:0, buffer:undefined },
-				{ name:'kick_hi808',      pan:false, panX:0,     panY:0, panZ:0, buffer:undefined },
-				{ name:'open_hat_choke',  pan:true,  panX:0.25,  panY:0, panZ:0, buffer:undefined },
-				{ name:'open_hat_hr16',   pan:true,  panX:-0.25, panY:0, panZ:0, buffer:undefined },
-				{ name:'perc_block',      pan:true,  panX:-0.25, panY:0, panZ:0, buffer:undefined },
-				{ name:'snare_zap',       pan:false, panX:0,     panY:0, panZ:0, buffer:undefined },
-				{ name:'vox_up',          pan:false, panX:0,     panY:0, panZ:0, buffer:undefined }
+				{ name:'bass_square_a1',  pan:false, panX:0, panY:0, panZ:0, buffer:undefined },
+				{ name:'clap_gate',       pan:true,  panX:0, panY:0, panZ:0, buffer:undefined },
+				{ name:'closed_hat_dm5',  pan:false, panX:0, panY:0, panZ:0, buffer:undefined },
+				{ name:'kick_hi808',      pan:false, panX:0, panY:0, panZ:0, buffer:undefined },
+				{ name:'open_hat_choke',  pan:true,  panX:0, panY:0, panZ:0, buffer:undefined },
+				{ name:'open_hat_hr16',   pan:true,  panX:0, panY:0, panZ:0, buffer:undefined },
+				{ name:'perc_block',      pan:true,  panX:0, panY:0, panZ:0, buffer:undefined },
+				{ name:'snare_zap',       pan:false, panX:0, panY:0, panZ:0, buffer:undefined },
+				{ name:'vox_up',          pan:false, panX:0, panY:0, panZ:0, buffer:undefined }
 			]
 		},
 		{ folderName:'kit2', name:'Bit Bunker Kit', id:1, loaded:false, drumSounds:[
-				{ name:'bass_sine_c1',    pan:false, panX:0,     panY:0, panZ:0, buffer:undefined },
-				{ name:'clap_707',        pan:true,  panX:0.25,  panY:0, panZ:0, buffer:undefined },
-				{ name:'closed_hat_808',  pan:false, panX:0,     panY:0, panZ:0, buffer:undefined },
-				{ name:'kick_casio',      pan:false, panX:0,     panY:0, panZ:0, buffer:undefined },
-				{ name:'open_hat_bit',    pan:true,  panX:0.25,  panY:0, panZ:0, buffer:undefined },
-				{ name:'closed_hat_bit',  pan:true,  panX:-0.25, panY:0, panZ:0, buffer:undefined },
-				{ name:'perc_claveshort', pan:true,  panX:-0.25, panY:0, panZ:0, buffer:undefined },
-				{ name:'snare_abstrakt',  pan:false, panX:0,     panY:0, panZ:0, buffer:undefined },
-				{ name:'vox_uh',          pan:false, panX:0,     panY:0, panZ:0, buffer:undefined }
+				{ name:'bass_sine_c1',    pan:false, panX:0, panY:0, panZ:0, buffer:undefined },
+				{ name:'clap_707',        pan:true,  panX:0, panY:0, panZ:0, buffer:undefined },
+				{ name:'closed_hat_808',  pan:false, panX:0, panY:0, panZ:0, buffer:undefined },
+				{ name:'kick_casio',      pan:false, panX:0, panY:0, panZ:0, buffer:undefined },
+				{ name:'open_hat_bit',    pan:true,  panX:0, panY:0, panZ:0, buffer:undefined },
+				{ name:'closed_hat_bit',  pan:true,  panX:0, panY:0, panZ:0, buffer:undefined },
+				{ name:'perc_claveshort', pan:true,  panX:0, panY:0, panZ:0, buffer:undefined },
+				{ name:'snare_abstrakt',  pan:false, panX:0, panY:0, panZ:0, buffer:undefined },
+				{ name:'vox_uh',          pan:false, panX:0, panY:0, panZ:0, buffer:undefined }
 			]
 		},
 		{ folderName:'kit3', name:'Data Com Kit', id:2, loaded:false, drumSounds:[
-				{ name:'bass_dist808_c2', pan:false, panX:0,     panY:0, panZ:0, buffer:undefined },
-				{ name:'clap_noiz',       pan:true,  panX:0.25,  panY:0, panZ:0, buffer:undefined },
-				{ name:'closed_hat_md16', pan:false, panX:0,     panY:0, panZ:0, buffer:undefined },
-				{ name:'kick_deepwood',   pan:false, panX:0,     panY:0, panZ:0, buffer:undefined },
-				{ name:'open_hat_emu',    pan:true,  panX:0.25,  panY:0, panZ:0, buffer:undefined },
-				{ name:'closed_hat_short',pan:true,  panX:-0.25, panY:0, panZ:0, buffer:undefined },
-				{ name:'perc_casiotone',  pan:true,  panX:-0.25, panY:0, panZ:0, buffer:undefined },
-				{ name:'snare_noiz',      pan:false, panX:0,     panY:0, panZ:0, buffer:undefined },
-				{ name:'kick_woody',      pan:false, panX:0,     panY:0, panZ:0, buffer:undefined }
+				{ name:'bass_dist808_c2', pan:false, panX:0, panY:0, panZ:0, buffer:undefined },
+				{ name:'clap_noiz',       pan:true,  panX:0, panY:0, panZ:0, buffer:undefined },
+				{ name:'closed_hat_md16', pan:false, panX:0, panY:0, panZ:0, buffer:undefined },
+				{ name:'kick_deepwood',   pan:false, panX:0, panY:0, panZ:0, buffer:undefined },
+				{ name:'open_hat_emu',    pan:true,  panX:0, panY:0, panZ:0, buffer:undefined },
+				{ name:'closed_hat_short',pan:true,  panX:0, panY:0, panZ:0, buffer:undefined },
+				{ name:'perc_casiotone',  pan:true,  panX:0, panY:0, panZ:0, buffer:undefined },
+				{ name:'snare_noiz',      pan:false, panX:0, panY:0, panZ:0, buffer:undefined },
+				{ name:'kick_woody',      pan:false, panX:0, panY:0, panZ:0, buffer:undefined }
 			]
 		}
 	],
@@ -126,9 +126,8 @@ function init(){
 	modal         = $('.modal');
 	
 	// check for audio context - current compatability:
-	if ('AudioContext' in window) {
-		// ConsoleLog.log('AudioContext is supported. Yay!');
-		context = new AudioContext();
+	if (window.AudioContext || window.webkitAudioContext) {
+		context = new (window.AudioContext || window.webkitAudioContext)();
 		audioApiSetup();
 	} else {
 		alert('Sorry - this browser doesn\'t support the Web Audio API.');
@@ -215,18 +214,18 @@ function loadDrumSound(kitObj, drumIndex){
 	var sound   = kitObj.drumSounds[drumIndex],
 		url     = 'audio/' + kitObj.folderName + '/' + sound.name + '.wav',
 		request = new XMLHttpRequest();
-	
-	// TODO - see: http://joshondesign.com/p/books/canvasdeepdive/chapter12.html
-	// for context.decodeAudioData
+		
 	request.open("GET", url, true);
 	request.responseType = "arraybuffer";
+
 	// ConsoleLog.log('loadDrumKits:: loading drum sound: ' + sound.name, + ', ' + url);
 	// asynchronous callback:
 	request.onload = function() {
-		var buffer = context.createBuffer(request.response, true);
+		context.decodeAudioData(request.response, function(decodedData) {
+			sound.buffer = decodedData;
+			ConsoleLog.log('loadDrumKits:: drum sound loaded: ' + sound.name + ', buffer: ' + sound.buffer + ', drumIndex: ' + drumIndex);
+		});
 		
-		sound.buffer = buffer;
-		// ConsoleLog.log('loadDrumKits:: drum sound loaded: ' + sound.name + ', buffer: ' + sound.buffer + ', drumIndex: ' + drumIndex);
 		drumLoadComplete(kitObj, drumIndex);
 	};
 	
@@ -245,7 +244,6 @@ function drumLoadComplete(kitObj, drumIndex){
 
 function kitLoadComplete(kitObj){ 
 	if(loadedCount == drumKits.length){
-		// TODO - hide loading overlay
 		// ConsoleLog.log('kitLoadComplete:: All kits loaded. Yay!');
 		modal.empty();
 		modal.hide();
@@ -257,8 +255,8 @@ function playNote(buffer, note, noteTime, pan, x, y, z) {
 	var volume    = (note > 1) ? VOL_MAX : VOL_MIN,
 		voice     = context.createBufferSource(),
 		gainNode  = context.createGain(),
-		finalNode;
-	
+		finalNode = null;
+
 	voice.buffer        = buffer;
 	gainNode.gain.value = volume;
 	
@@ -276,7 +274,7 @@ function playNote(buffer, note, noteTime, pan, x, y, z) {
 	finalNode.connect(gainNode);
 	gainNode.connect(masterGainNode);
 	
-	voice.noteOn(noteTime);
+	voice.start(noteTime);
 }
 
 //*****************************************************************
@@ -431,7 +429,7 @@ function schedule() {
 			var note   = sequence[i][rhythmIndex],
 				sound  = drumKits[currentKit].drumSounds[i];
 			
-			if(note != 0) playNote(sound.buffer, note, contextPlayTime, sound.pan, sound.panX, sound.panY, sound.panZ);
+			if(note > 0) playNote(sound.buffer, note, contextPlayTime, sound.pan, sound.panX, sound.panY, sound.panZ);
 		}
 		
 		// synchronize drawing time with sound:
